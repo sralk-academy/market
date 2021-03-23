@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+<body>
+    <aside>
+        <a href="{% url 'index' %}"><img src="{% static 'main/img/pink2.svg' %}" alt=""></a>
+        <span class="logo"></span>
+        <h3>Навигация</h3>
+        <ul>
+            <a href="{% url 'about' %}"><li><i class="fas fa-female"></i> Женщины</li></a>
+            <a href=""><li><i class="fas fa-male"></i> Мужчины</li></a>
+            <a href=""><li><i class="fas fa-child"></i> Дети</li></a>
+            <a href=""><li><i class="fas fa-glasses"></i> Аксессуары</li></a>
+        </ul>
+    </aside>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    
+</body>
+</html>
