@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,22 +11,123 @@
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 </head>
+
 <body>
     <aside>
         <a href="{% url 'index' %}"><img src="{% static 'main/img/pink2.svg' %}" alt=""></a>
         <span class="logo"></span>
         <h3>Навигация</h3>
         <ul>
-            <a href="{% url 'about' %}"><li><i class="fas fa-female"></i> Женщины</li></a>
-            <a href=""><li><i class="fas fa-male"></i> Мужчины</li></a>
-            <a href=""><li><i class="fas fa-child"></i> Дети</li></a>
-            <a href=""><li><i class="fas fa-glasses"></i> Аксессуары</li></a>
+            <a href="{% url 'female' %}">
+                <li><i class="fas fa-female"></i> Женщины</li>
+            </a>
+            <a href="{% url 'male' %}">
+                <li><i class="fas fa-male"></i> Мужчины</li>
+            </a>
+            <a href="">
+                <li><i class="fas fa-child"></i> Дети</li>
+            </a>
+            <a href="">
+                <li><i class="fas fa-glasses"></i> Аксессуары</li>
+            </a>
         </ul>
     </aside>
     <main>
         {% block content %}
         {% endblock %}
     </main>
-    
+
+
 </body>
+<footer class="end">
+    <div class="test">
+        <div class="end-customer">
+            <p class="end-customer__title">Покупателю</p>
+            <a href="">
+                <p class="end-customer__text">Акции</p>
+            </a>
+            <a href="">
+                <p class="end-customer__text">Доставка</p>
+            </a>
+            <a href="">
+                <p class="end-customer__text">Оплата</p>
+            </a>
+            <a href="">
+                <p class="end-customer__text">Обмен и возврат</p>
+            </a>
+            <a href="">
+                <p class="end-customer__text">Размеры</p>
+            </a>
+            <a href="">
+                <p class="end-customer__text">Подарочная карта</p>
+            </a>
+            <a href="">
+                <p class="end-customer__text">FAQ</p>
+            </a>
+            <a href="">
+                <p class="end-customer__text">Уход за одеждой</p>
+            </a>
+        </div>
+
+        <div class="end-program">
+            <p class="end-customer__title">Клубная программа</p>
+            <a href="">
+                <p class="end-customer__text">Частые вопросы</p>
+            </a>
+            <a href="">
+                <p class="end-customer__text">Правила участия</p>
+            </a>
+            <a href="">
+                <p class="end-customer__text">Виды карт</p>
+            </a>
+        </div>
+
+        <div class="end-about">
+            <p class="end-customer__title">О компании</p>
+            <a href="">
+                <p class="end-customer__text">Новости</p>
+            </a>
+            <a href="">
+                <p class="end-customer__text">Адреса магазинов</p>
+            </a>
+            <a href="">
+                <p class="end-customer__text">Публичная оферта</p>
+            </a>
+            <a href="">
+                <p class="end-customer__text">Пользовательское соглашение</p>
+            </a>
+        </div>
+
+        <div class='end-wrapper'>
+            <div class="end-feedback">
+                <p class="end-customer__title">8 900 000 00 00</p>
+                <p class="end-customer__title">support@mail.ru</p>
+            </div>
+            <div class="end-media">
+                <a href="#">
+                    <div class="vk"></i>
+                        <i class="fab fa-vk"></i>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="insta">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="fb">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="end-сopyright">
+        <p class="end-customer__text">© ООО «Pink» 2020—2021. Все права защищены.<br>
+            Юридический адрес: г. Новокузнецк, пр. Металлургов, д. 19<br>
+            Указанная стоимость товаров и условия их приобретения действительны по состоянию на текущую дату.</p>
+    </div>
+</footer>
+
 </html>

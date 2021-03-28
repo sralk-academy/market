@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+
+
+{% block title %}Про нас{% endblock %}
+
+{% block content %}
+<div class="features">
+    {% for el in female %}
+    <a href="{% url 'new-page' el.id %}">
+        <div class="box">
+            <h2>{{ el.title }}</h2>
+            <img style="width: 100%;" src="{{ el.image }}" alt="">
+            <p>размеры: {{ el.size }}</p>
+            <p>{{ el.priсe }} Р.</p>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}

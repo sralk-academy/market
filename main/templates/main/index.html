@@ -1,11 +1,27 @@
 {% extends 'main/layout.html' %}
-
+{% load static %}
 
 {% block title %}Главная страница{% endblock %}
 
 {% block content %}
-    <div class="features">
-        <h1>Главная страница</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto et eligendi exercitationem molestias expedita porro blanditiis dignissimos reiciendis officia magni?</p>
+
+<div class="intro">
+    <div class="intro-subscribe" style="background-image: url('{% static 'main/img/subscribe.png' %}');">
+        <div class="intro-subscribe1">
+            <div class="intro-subscribe2">
+                <div class="intro-subscribe3">
+                    <p class="intro-subscribe__text">Скидки, акции, новинки
+                        Подпишитесь!</p>
+                        <input type="text" class="intro-input" placeholder="Ваш Email">
+                        <p style="font-size: 12px;">Принимаю <a href="#" style="font-size: 12px;">
+                            пользовательское соглашение</a></p>
+                        <button class="btn btn-danger" style="width: 100%;margin-top: 10px;">
+                            Подписаться</button>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+
+
 {% endblock %}

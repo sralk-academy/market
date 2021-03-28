@@ -1,0 +1,27 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}Про нас{% endblock %}
+
+{% block content %}
+<div class="product">
+    <div class="product-photo">
+        <img src="{{ newPage.image }}" alt=""> <!-- ПОДКЛЮЧИТЬ КАРТИНКУ -->
+        <!-- ПОДКЛЮЧИТЬ КАРТИНКУ -->
+    </div>
+    <div class="product-description">
+        <h2>{{ newPage.title }}</h2>
+        <p style="font-size: 30px;">{{ newPage.priсe }} Р.</p>
+        <p class="product-description__title">Размеры:</p>
+        <p class="product-description__text">{{ newPage.size }}</p>
+        <p class="product-description__title">Описание:</p>
+        <p class="product-description__text">{{ newPage.description }}</p>
+        <p class="product-description__title">Цвет:</p>
+        <p class="product-description__text">{{ newPage.color }}</p>
+        <p class="product-description__title">Изготовитель:</p>
+        <p class="product-description__text">{{ newPage.make }}</p>
+        <p class="product-description__title">Состав:</p>
+        <p class="product-description__text">{{ newPage.composition }}</p>
+    </div>
+</div>
+{% endblock %}
