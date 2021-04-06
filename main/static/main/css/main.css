@@ -2,6 +2,7 @@ body {
     background: #2c2c2c;
     min-width: 950px;
 }
+
 a:hover{
     text-decoration: none;
     transform: scale(1.05);

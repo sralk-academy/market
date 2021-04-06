@@ -6,7 +6,7 @@
 {% block content %}
 <div class="product">
     <div class="product-photo">
-        <img src="{{ newPage.image }}" alt=""> <!-- ПОДКЛЮЧИТЬ КАРТИНКУ -->
+        <img src="{% static 'main/img/category/41296070299.jpg' %}" alt="" style="width: 100%; height: 100%;"> <!-- ПОДКЛЮЧИТЬ КАРТИНКУ -->
         <!-- ПОДКЛЮЧИТЬ КАРТИНКУ -->
     </div>
     <div class="product-description">
@@ -22,6 +22,12 @@
         <p class="product-description__text">{{ newPage.make }}</p>
         <p class="product-description__title">Состав:</p>
         <p class="product-description__text">{{ newPage.composition }}</p>
+        <p class="product-description__title">Наличие:</p>
+        <p class="product-description__text">{{ newPage.availability }}</p>
+        <p class="product-description__title">Доставка:</p>
+        <p class="product-description__text">{{ newPage.delivery }}</p>
+        <button class="btn btn-danger" style="margin-top: 8px;">
+            Купить</button>
     </div>
 </div>
 {% endblock %}

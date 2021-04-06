@@ -1,11 +1,11 @@
 {% extends 'main/layout.html' %}
 
 
-{% block title %}Женская одежда{% endblock %}
+{% block title %}Детская одежда{% endblock %}
 
 {% block content %}
 <div class="features">
-    {% for el in female %}
+    {% for el in children %}
     <a href="{% url 'new-page' el.id %}">
         <div class="box">
             <h2>{{ el.title }}</h2>
